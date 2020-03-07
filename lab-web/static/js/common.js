@@ -1,28 +1,22 @@
 $(document).ready(function(){
-   //alert($(document.body).width())
-    $('#welcome').show(2000)
-    $('#bottom_div').show(2000)
-    setTimeout(function(){
-        $('#welcome').hide(3000)
-    }, 2500);
-    setTimeout(function(){
-        $('#center_text').show(2000)
-    }, 2500);
+     if($(document).width()<768){
+            $('#example-navbar-collapse').addClass('nav_change1')
+            $('#example-navbar-collapse').removeClass('nav_change2')
+        }
+        else{
+            $('#example-navbar-collapse').removeClass('nav_change1')
+            $('#example-navbar-collapse').addClass('nav_change2')
+        }
+
+    $(window).resize(function () {
+        if($(document).width()<768){
+            $('#example-navbar-collapse').addClass('nav_change1')
+            $('#example-navbar-collapse').removeClass('nav_change2')
+        }
+        else{
+            $('#example-navbar-collapse').removeClass('nav_change1')
+            $('#example-navbar-collapse').addClass('nav_change2')
+        }
+
+   });
 });
-
-
-function do_once(){
-  if($(document.body).width()<=500){
-            $("span").addClass("change_font_size");
-             $("button").addClass("change_font_size");
-             $("#option4").addClass("change_font_size")
-      $("b").addClass("change_font_size")
-       }else{
-          $("span").removeClass("change_font_size");
-          $("button").removeClass("change_font_size");
-           $("#option4").removeClass("change_font_size")
-      $("b").removeClass("change_font_size")
-    }
-
-
-}

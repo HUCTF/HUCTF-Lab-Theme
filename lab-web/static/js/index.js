@@ -1,6 +1,5 @@
 $(document).ready(function(){
-   //alert($(document.body).width())
-
+   // alert($(document.body).width())
     //index
     $('#welcome').show(2000)
     $('#bottom_div').show(2000)
@@ -14,8 +13,6 @@ $(document).ready(function(){
     //member
 
     $('#page1').load('test.html');
-
-
 
 });
 

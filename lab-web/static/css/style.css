@@ -1,8 +1,10 @@
 *{
     margin: 0;
+/*white-space: pre-line;*/
 }
+nav{z-index: 2}
 .navbar-nav{
-    float: right;
+
 }
 .navbar-brand{
     margin-left: 10vw;
@@ -112,110 +114,15 @@ canvas {
 
 
 
-/* member */
-
-.member_main_div{
+.main_div{
     height: calc(100% - 50px);
-    background-color:#0a0a0a;
-    background:rgba(0,0,0,0.3);
+    /*background-color:#0a0a0a;*/
+    background:rgba(0,0,0,0.2);
     overflow-y: auto;
      padding: 10px;
     padding-top: 6px;
     padding-left: 15px;
  }
-/*.teacher{*/
-   /**/
-    /**/
-
-    /*height: 110px;*/
-    /*background-color: #0a0a0a;*/
-     /*background:rgba(0,0,0,0.3);*/
-
-/*}*/
-.member_top{
-
-    height: 25px;
-    /*background-color: #1E9FFF;*/
-    opacity: 0.75
-}
-.member_title{
-    width: 90px;
-    /*background-color: #8a6d3b;*/
-    /*border-top: 1px solid rgba(0,0,0,0.3);*/
-    border-bottom: 1px solid rgba(0,0,0,0.3);
-}
-.glyphicon{
-    padding-top: 2px;
-    transform: scale(0.8,0.8);
-}
-
-.teacher_detail{
-    height: 90px;
-    /*background-color: grey;*/
-     text-align:center;
-    margin-bottom:4px ;
-    overflow-y: auto;
-
-}
-.member_detail{
-    height: 90px;
-    /*background-color: grey;*/
-     text-align:center;
-    margin-bottom:4px ;
-    overflow-y: auto;
-
-}
-
-.member_img{
-    height: 60px;
-    width: 60px;
-    /*background-color: grey;*/
-    border-radius: 12px;
-    align:middle;
-    /*position:relative;*/
-
-}
-.member_img_div{
-    position:relative;
-     margin: 3px;
-    height: 70px;
-    font-size: 12px;
-    float: left;
-}
-.img_div{
-
-    /*background-color: #8a6d3b;*/
-    height: 80px;
-    /*width: 40vw;*/
-    display: inline-block;
-    margin: 0 auto;
-
-
-}
-
-
-.text_div{
-    float: left;
-    /*width: 40vw;*/
-    /*margin-left: 65px;*/
-    padding-top: 5px;
-    /*background-color: #8a6d3b;*/
-    color: #ffffff;
-
-}
-.member_detail_text{
-    position: absolute;
-    text-align: left;
-    height:65px ;
-     width: calc(100% - 95px);
-    display: none;
-    /*background-color: #8a6d3b;*/
-    overflow-y: auto;
-    transform:translate(75px,0px);
-
-
-}
-
   .scrollbar {
   width : 30px;
   height: auto;
@@ -226,18 +133,52 @@ canvas {
 
   .test-1::-webkit-scrollbar {
   /*滚动条整体样式*/
-  width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+  width : 5px;  /*高宽分别对应横竖滚动条的尺寸*/
   height: 1px;
+
   }
   .test-1::-webkit-scrollbar-thumb {
   /*滚动条里面小方块*/
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
   background   : rgba(0, 0, 0, 0.5);
+
   }
   .test-1::-webkit-scrollbar-track {
   /*滚动条里面轨道*/
   box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background   : #ededed;
+
   }
+
+    .test-2::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 0px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+  }
+  .test-2::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 0px;
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background   : rgba(0, 0, 0, 0.5);
+  }
+  .test-2::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background   : #ededed;
+  }
+
+
+  .nav_change1{
+      background: rgba(0, 0, 0, 1);
+      /*padding: 0 auto;*/
+  }
+  .nav_change2{
+      float: right;
+  }
+.normal_text{
+     white-space: pre-line;
+    /*可以识别/n*/
+}
