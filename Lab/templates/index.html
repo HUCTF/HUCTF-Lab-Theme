@@ -12,7 +12,7 @@
     <script src="static/plugin/jquery-3.3.1.min.js"></script>
     <script src="static/plugin/bootstrap.min.js"></script>
     <script src="static/js/index.js"></script>
-    <script src="static/js/transport.js"></script>
+    <script src="static/js/common.js"></script>
     <script  src="static/plugin/jquery.zclip.js"></script>
     <script  src="static/plugin/delaunator.min.js"></script>
 
@@ -21,6 +21,7 @@
 
 
 </head>
+
 <body>
 <canvas id="canvas"></canvas>
 <script  src="static/canvas-plugin/js/101.js"></script>
@@ -37,29 +38,17 @@
 		</button>
 		<a class="navbar-brand" href="#">HUCTF-Lab</a>
 	</div>
-	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+	<div class="collapse navbar-collapse " id="example-navbar-collapse">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">简介</a></li>
-			<li><a href="#">事件</a></li>
-			<li><a href="goto_member">成员</a></li>
-            <li><a href="#">荣誉</a></li>
-            <li><a href="#">生活</a></li>
-            <li><a href="#">博客</a></li>
-            <li><a href="#">科研中心</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					Java <b class="caret"></b>
-				</a>
-				<ul class="dropdown-menu">
-					<li><a href="#">jmeter</a></li>
-					<li><a href="#">EJB</a></li>
-					<li><a href="#">Jasper Report</a></li>
-					<li class="divider"></li>
-					<li><a href="#">分离的链接</a></li>
-					<li class="divider"></li>
-					<li><a href="#">另一个分离的链接</a></li>
-				</ul>
-			</li>
+            <li class="active"><a href="/">首页</a></li>
+			<li ><a href="/goto_introduction">简介</a></li>
+			<li><a href="/goto_history">事件</a></li>
+			<li ><a href="/goto_member">成员</a></li>
+            <!-- <li><a href="/goto_honor">荣誉</a></li>-->
+            <li><a href="/goto_science">科研中心</a></li>
+            <li><a href="/goto_newstudent">招新</a></li>
+            <li><a href="/goto_blog">博客</a></li>
+            <li><a href="/goto_cooperation">合作</a></li>
 		</ul>
 	</div>
 	</div>
@@ -120,8 +109,6 @@
         <!--<div class="option1">湖州师范学院</div>-->
     </div>
 </div>
-
-
 <!--<div class="part1"></div>-->
 </body>
 </html>

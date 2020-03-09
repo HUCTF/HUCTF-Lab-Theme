@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>湖州师范学院-网络科技安全实验室</title>
+    <link rel="stylesheet" href="static/plugin/bootstrap.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <script src="static/plugin/jquery-3.3.1.min.js"></script>
+    <script src="static/plugin/bootstrap.min.js"></script>
+    <script src="static/js/member.js"></script>
+    <script src="static/js/common.js"></script>
+    <script  src="static/plugin/jquery.zclip.js"></script>
+    <script  src="static/plugin/delaunator.min.js"></script>
+
+
+    <link rel="stylesheet" href="static/css/introduction.css">
+    <script src="static/js/introduction.js"></script>
+    <!--背景-->
+
+
+
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script  src="static/canvas-plugin/js/101.js"></script>
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+			<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">HUCTF-Lab</a>
+	</div>
+	<div class="collapse navbar-collapse " id="example-navbar-collapse">
+		<ul class="nav navbar-nav">
+			 <li ><a href="/">首页</a></li>
+			<li class="active"><a href="/goto_introduction">简介</a></li>
+			<li><a href="/goto_history">事件</a></li>
+			<li ><a href="/goto_member">成员</a></li>
+            <!-- <li><a href="/goto_honor">荣誉</a></li>-->
+            <li><a href="/goto_science">科研中心</a></li>
+            <li><a href="/goto_newstudent">招新</a></li>
+            <li><a href="/goto_blog">博客</a></li>
+            <li><a href="/goto_cooperation">合作</a></li>
+		</ul>
+	</div>
+	</div>
+</nav>
+
+<div class="introduction test-1">
+
+<div id="myCarousel" class="carousel slide carousel_div">
+    <div class="top" id="img"><div class="title">照片展示&nbsp<span class="glyphicon glyphicon-chevron-right"id='img_icon'></span></div>
+    </div>
+    <div class="img_detail" id="img_detail">
+
+                <ol class="carousel-indicators">
+                    {% for each in introduction_dic['img_dic'] %}
+                        {% if each=='0' %}
+                        <li data-target = '#myCarousel'  class="active"  data-slide-to= {{ each }}></li>
+                        {% else %}
+                         <li data-target = '#myCarousel'   data-slide-to= {{ each }}></li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+
+
+                <div class="carousel-inner" style="background:rgba(0,0,0,0.3);">
+                {% for each in introduction_dic['img_dic'] %}
+                    {% if each=='0' %}
+                        <div class="item active">
+                            <img src={{ introduction_dic['img_dic'][each]['url'] }} alt={{ introduction_dic['img_dic'][each]['alt'] }} />
+                        </div>
+                        {% else %}
+                        <div class="item ">
+                            <img src={{ introduction_dic['img_dic'][each]['url'] }} alt={{ introduction_dic['img_dic'][each]['alt'] }} />
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+    </div>
+ </div>
+
+<div class="text test-1">
+    <div class="top" id="int"><div class="title">实验室简介&nbsp<span class="glyphicon glyphicon-chevron-right"id='int_icon'></span></div>
+    </div>
+
+    <div class=" int_detail "  id='int_detail'>
+        {{  introduction_dic['inruduction_text']}}
+    </div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
