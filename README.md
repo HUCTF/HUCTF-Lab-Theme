@@ -8,10 +8,6 @@
 ```bash
 git clone https://github.com/HUCTF/HUCTF-Lab
 cd HUCTF-Lab
-export FLASK_APP=Lab
-flask run --host=0.0.0.0
-or
-cd HUCTF-Lab/Lab
-python __init__.py
+python run.py
 ```
 
