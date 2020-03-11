@@ -1,6 +1,7 @@
 $(document).ready(function(){
    // alert($(document.body).width())
     //index
+
     $('#welcome').show(2000)
     $('#bottom_div').show(2000)
     setTimeout(function(){

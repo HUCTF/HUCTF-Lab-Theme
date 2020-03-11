@@ -40,6 +40,7 @@
 }
 .detail1 img{
     max-width: 80%;
+
 }
 .people{
     /*background-color: paleturquoise;*/
@@ -68,3 +69,45 @@
 /*#detail{*/
     /*display: none;*/
 /*}*/
+.findall{
+    max-width:900px;
+width: 100%;
+margin: 0 auto;
+    height: auto;
+    min-height: 35px;
+    background:rgba(0,0,0,0.2);
+    padding: 0;
+}
+.find_input{
+    float: left;
+    /*width: calc(100% - 60px);*/
+    width: 100%;
+    margin: 0 auto
+}
+.find_btn{
+    width: 60px;
+    float: left;
+}
+.tag_1{
+     max-width:900px;
+    width: 100%;
+    /*height: 50px;*/
+    /*background-color: #1E9FFF;*/
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.tag_detail{
+    height: 35px;
+    margin-left: 10px;
+}
+.tag_detail div{
+    float: left;
+}
+.tag_but{
+    float: left;
+    display: block;
+    margin: 5px;
+}
+.tagg{
+
+}

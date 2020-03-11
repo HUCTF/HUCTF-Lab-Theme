@@ -87,7 +87,7 @@ canvas {
 
 
 .buttom_div{
-    height: 20vh;
+    height: 40vh;
     /*background-color: #8a6d3b;*/
 }
 .buttom_div div{
@@ -181,4 +181,41 @@ canvas {
 .normal_text{
      white-space: pre-line;
     /*可以识别/n*/
+}
+/*搜索栏*/
+li,ul {
+	margin:0;
+	padding:0;
+}
+ul li {
+	list-style:none;
+}
+.basic-grey {
+
+	margin:5% 10%;
+}
+.basic-grey .Companies {
+	position:relative;
+}
+.basic-grey .Companies ul {
+	position:relative;
+	height:210px;
+	width:100%;
+	overflow-y:auto;
+	border:1px solid #DDD;
+	display:none;
+}
+.basic-grey .Companies ul li {
+	padding:3px 12px;
+}
+.basic-grey .Companies ul li:hover {
+	background-color:#bebebe;
+	cursor:pointer;
+}
+.basic-grey .Companies ul li.top {
+	position:absolute;
+	top:0;
+}
+.yibai{
+    height: 100%;
 }
