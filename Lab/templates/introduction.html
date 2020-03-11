@@ -11,7 +11,6 @@
 
     <script src="static/plugin/jquery-3.3.1.min.js"></script>
     <script src="static/plugin/bootstrap.min.js"></script>
-    <script src="static/js/member.js"></script>
     <script src="static/js/common.js"></script>
     <script  src="static/plugin/jquery.zclip.js"></script>
     <script  src="static/plugin/delaunator.min.js"></script>
@@ -19,6 +18,7 @@
 
     <link rel="stylesheet" href="static/css/introduction.css">
     <script src="static/js/introduction.js"></script>
+    <script src="static/plugin/showdown.min.js"></script>
     <!--背景-->
 
 
@@ -58,9 +58,9 @@
 <div class="introduction test-1">
 
 <div id="myCarousel" class="carousel slide carousel_div">
-    <div class="top" id="img"><div class="title">照片展示&nbsp<span class="glyphicon glyphicon-chevron-right"id='img_icon'></span></div>
+    <div class="top" id="img_top"><div class="title">照片展示&nbsp<span class="glyphicon glyphicon-chevron-right"id='img_icon'></span></div>
     </div>
-    <div class="img_detail" id="img_detail">
+    <div class="img_detail" id="img_detail1">
 
                 <ol class="carousel-indicators">
                     {% for each in introduction_dic['img_dic'] %}
@@ -86,20 +86,37 @@
                         {% endif %}
                     {% endfor %}
                 </div>
+                 <a class="left carousel-control" href='#myCarousel' role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href='#myCarousel' role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
     </div>
  </div>
 
-<div class="text test-1">
-    <div class="top" id="int"><div class="title">实验室简介&nbsp<span class="glyphicon glyphicon-chevron-right"id='int_icon'></span></div>
-    </div>
 
-    <div class=" int_detail "  id='int_detail'>
-        {{  introduction_dic['inruduction_text']}}
+ {% for each in introduction_dic['md_dic'] %}
+    <div class="one_div">
+            <div class="top" id={{ each+ '_top'}}><div class="title">阅读全文&nbsp<span class="glyphicon glyphicon-chevron-right"id= {{ each+'_icon' }} ></span></div>
+            </div>
+
+            <div id={{each+"_detail" }} style="display: none;"><h1>使用 jQuery AJAX 修改文本内容</h1></div>
+                <!--<button>获取外部内div容</button>-->
+            <div id={{ each+"_detail1" }}  class='detail1' style="display: none;"></div>
+
+    </div>
+ {% endfor %}
+
+
+    <div id="foot" style="display: none;height: 45px;background:rgba(0,0,0,0.4); opacity: 0.7;margin: 10px">
+        <div style="margin-top: 5px;text-align: center">Sponsored by Huzhou University
+                                                            </br>Powered by HUCTF
+            </div>
     </div>
 </div>
-
-</div>
-
 
 
 </body>

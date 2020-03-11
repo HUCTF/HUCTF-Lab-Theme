@@ -71,11 +71,12 @@
             <div class="member_text_div ">
                {% for each in member_dic[type]  %}
                 <div  class="member_detail_text test-1" id={{ each+'_detail' }}>
-                    <div style="height:100.5px;width: 80px;float: left">
-                        <div style="margin-top: 100px;margin-left:5px ">
+                    <div style="height:120.5px;width: 80px;float: left">
+                        <div style="margin-top: 110px;margin-left:5px ">
                             {%	if member_dic[type][each]['blog'] != ''	 %}
                             <button type="button" class="btn btn-primary btn-xs"><a style="color: white" href={{ member_dic[type][each]['blog'] }}>个人博客</a></button>
                             {%	else %}
+                             <button type="button" class="btn btn-primary btn-xs"><a style="color: white" >暂无博客</a></button>
                             {% endif %}
                         </div>
                     </div>
@@ -89,7 +90,11 @@
   {% endfor %}
 
 
-
+<div id="foot" style="display: none;height: 45px;background:rgba(0,0,0,0.4); opacity: 0.7;">
+        <div style="margin-top: 5px;text-align: center">Sponsored by Huzhou University
+                                                            </br>Powered by HUCTF
+            </div>
+    </div>
 </div>
 <p></p>
 </body>
