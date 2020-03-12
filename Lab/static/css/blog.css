@@ -35,7 +35,6 @@
 .detail1{
     /*white-space: pre-line;*/
     margin: 20px;
-
     word-wrap:break-word  ;
 }
 .detail1 img{
@@ -60,7 +59,7 @@
 .icon3{
     /*background-color: grey;*/
     border-bottom: 1px solid rgba(0,0,0,0.3);
-    height: 20px;
+    min-height: 20px;
 }
 .icon3_each{
     margin-left: 10px;
@@ -71,8 +70,8 @@
 /*}*/
 .findall{
     max-width:900px;
-width: 100%;
-margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
     height: auto;
     min-height: 35px;
     background:rgba(0,0,0,0.2);
@@ -91,13 +90,20 @@ margin: 0 auto;
 .tag_1{
      max-width:900px;
     width: 100%;
-    /*height: 50px;*/
+    /*height:auto;*/
     /*background-color: #1E9FFF;*/
     margin: 0 auto;
     margin-top: 10px;
 }
 .tag_detail{
-    height: 35px;
+
+    /*height:auto!important;*/
+
+    /*min-height:35px;*/
+    /*height: 35px;*/
+    display: none;
+    /*height: 100px;*/
+    /*min-height: 100px;*/
     margin-left: 10px;
 }
 .tag_detail div{
@@ -105,9 +111,10 @@ margin: 0 auto;
 }
 .tag_but{
     float: left;
-    display: block;
+    /*display: block;*/
     margin: 5px;
 }
-.tagg{
+.Companies{
 
 }
+.clear{ clear:both}
