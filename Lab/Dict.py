@@ -16,7 +16,7 @@ blog_dic={
     'blog2':{
         'id':'2',
         'file_name':'yx-3.md',
-        'title':'c语言中printf的各参数分布',
+        'title':'c语言中printf的各参数分布（摘录）',
         'author':'杨介帅',
         'time':'2020/3/10',
         'type':'pwn',
@@ -37,6 +37,14 @@ blog_dic={
         'time':'2020/3/10',
         'type':'pwn',
     },
+    'blog5':{
+        'id':'5',
+        'file_name':'yx-6.md',
+        'title':'解决子级用css float浮动导致div不能自适应高度的问题',
+        'author':'杨介帅',
+        'time':'2020/3/12',
+        'type':'前端',
+    },
 }
 tag_dic={
     'basic':{
@@ -45,10 +53,11 @@ tag_dic={
         'misc':[],
         'web':[],
         'crypto':[],
-        'other':['1'],
+        'other':['1','5'],
+
     },
     '2017':{
-        '杨介帅':['1','2','3','4'],
+        '杨介帅':['1','2','3','4','5'],
         '厉程':[],
         '凌杭':[],
         '李艺艺':[],
