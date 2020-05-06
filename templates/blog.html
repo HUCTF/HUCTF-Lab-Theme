@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>湖州师范学院-网络科技安全实验室</title>
+    <link rel="stylesheet" href="static/plugin/bootstrap.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <script src="static/plugin/jquery-3.3.1.min.js"></script>
+    <script src="static/plugin/bootstrap.min.js"></script>
+
+    <script src="static/js/common.js"></script>
+    <script  src="static/plugin/jquery.zclip.js"></script>
+    <script  src="static/plugin/delaunator.min.js"></script>
+
+    <link rel="stylesheet" href="static/css/blog.css">
+    <script src="static/js/blog.js"></script>
+    <script src="static/plugin/showdown.min.js"></script>
+    <!--背景-->
+
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script  src="static/canvas-plugin/js/101.js"></script>
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+			<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">HUCTF-Lab</a>
+	</div>
+	<div class="collapse navbar-collapse " id="example-navbar-collapse">
+		<ul class="nav navbar-nav">
+            <li ><a href="/">首页</a></li>
+			<li ><a href="/goto_introduction">简介</a></li>
+			<li ><a href="/goto_history">事件</a></li>
+			<li><a href="/goto_member">成员</a></li>
+           <!-- <li><a href="/goto_honor">荣誉</a></li>-->
+            <li><a href="/goto_science">科研中心</a></li>
+            <li><a href="/goto_newstudent">招新</a></li>
+            <li class="active"><a href="/goto_blog" >博客</a></li>
+            <li><a href="/goto_cooperation">合作</a></li>
+		</ul>
+	</div>
+	</div>
+</nav>
+
+
+<div class="main_div test-1">
+
+
+    <div class="g-container findall">
+    <form action="" class="basic-grey" style="width: 100%;margin: 0 auto" >
+        <div class="form-group" >
+            <div class="Companies" >
+
+                <input class="form-control find_input"  type="text" placeholder="请选择" id="js-groupId">
+                <!--<button type="button" class="btn btn-primary find_btn" id="find_btn">搜索</button>-->
+                <a id="aa" href="" style="display: none"></a>
+                <input type="hidden" id="groupId">
+
+                <ul id="groupid" style="display: none">
+                    {% for each in blog_dic %}
+                    <li data-id={{ each + 'id'}} ><a style="color: white" href={{"#"+ each }}>{{ blog_dic[each]['title']}}</a></li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </form>
+
+</div>
+
+    <div class="tag_1">
+        <div id= 'tag_top'><span class="glyphicon glyphicon-tags"></span> Tags:<span class="glyphicon glyphicon-chevron-right"id=  'tag_icon'  ></span></div>
+
+
+        <div class="tag_detail"  id="tag_detail1" style="" >
+        {%  for each in tag_dic %}
+            <div style="clear:both;">
+            <div style="margin-top: 5px;">{{ each }}:</div>
+            <div >
+                {% for i in tag_dic[each] %}
+                <button type="button" class="btn btn-default btn-xs tag_but tagg">
+                 <span class="glyphicon glyphicon-tags"></span> <span class="tagg1" data={{ each }}>{{ i }}</span>
+                 </button>
+                {% endfor %}
+            </div>
+            </div>
+
+         {% endfor %}
+
+        </div>
+        <div class="clear"></div>
+
+
+    </div>
+
+    {% for each in blog_dic %}
+    <div class="one_div" id={{ each }}>
+            <div class="top" id={{ each+ '_top'}}><div class="title">阅读全文&nbsp<span class="glyphicon glyphicon-chevron-right"id= {{ each+'_icon' }} ></span></div>
+            </div>
+
+            <div id={{each+"_detail" }} style="display: none;"><h1>使用 jQuery AJAX 修改文本内容</h1></div>
+                <!--<button>获取外部内div容</button>-->
+        <div style="display: none" id={{each+"_top_div" }} >
+            <div class='detail1 title1' id={{ each+ "_title" }}></div>
+
+            <div class='detail1 icon3'>
+                <div style="float: left;" class="icon3_each"><span	class="glyphicon glyphicon-calendar"></span>-时间:<p id={{each+ "_time"}} style="float: right">{{ blog_dic[each]['time'] }}</p></div>
+                <div style="float: left;" class="icon3_each"><span	class="glyphicon glyphicon-book"></span>-分类:<p id={{ each+ "_type"}} style="float: right">{{ blog_dic[each]['type'] }}</p></div>
+                <div style="float: left;" class="icon3_each"><span	class="glyphicon glyphicon glyphicon-eye-open"></span>-阅读:100</div>
+                 <div class="clear"></div>
+            </div>
+        </div>
+            <div id={{ each+"_detail1" }}  class='detail1' style="display: none"></div>
+             <div class="people" style="display: none" id={{ each+"_detail1_aut" }}>
+                    <span class="glyphicon glyphicon-user">-作者:<p id={{ each+ "_author"}} style="float: right">{{ blog_dic[each]['author'] }}</p></span>
+                   <div class="clear"></div>
+                </div>
+
+    </div>
+    {% endfor %}
+<div id="foot" style="display: none;height: 45px;background:rgba(0,0,0,0.4); opacity: 0.7;">
+        <div style="margin-top: 5px;text-align: center">Sponsored by Huzhou University
+                                                            </br>Powered by HUCTF
+            </div>
+    </div>
+</div>
+
+</body>
+</html>
