@@ -67,4 +67,4 @@ def get_Dict():
         return  result
 
 if __name__ == '__main__':
-    server.run(port=8886, host='0.0.0.0')  # 指定端口、host,0.0.0.0代表不管几个网卡，任何ip都可以访问
+    server.run(port=80, host='0.0.0.0')  # 指定端口、host,0.0.0.0代表不管几个网卡，任何ip都可以访问
